@@ -1,0 +1,69 @@
+artifacts:
+    bitbucket:
+      enabled: false
+      accounts:
+      - name: my_bitbucket
+        username: my_username
+        password: my_password
+        usernamePasswordFile: /my_file
+    gcs:
+      enabled: false
+      accounts:
+      - name: my-gcs-account
+    oracle:
+      enabled: false
+      accounts:
+      - name: my-oracle-account
+        namespace: n
+        region: region
+        userId: u
+        fingerprint: fp
+        sshPrivateKeyFilePath: /p
+        privateKeyPassphrase: p
+        tenancyId: t
+    github:
+      enabled: false
+      accounts:
+      - name: my-github-account
+        username: userId
+        password: pass
+        usernamePasswordFile: /file
+        token: token
+        tokenFile: /token-file
+    gitlab:
+      enabled: false
+      accounts:
+      - name: gitlab-account
+        token: token
+        tokenFile: file
+    gitrepo:
+      enabled: false
+      accounts: []
+    http:
+      enabled: true
+      accounts: []
+    helm:
+      enabled: false
+      accounts:
+      - name: helm-account
+        repository: r
+        username: u
+        password: p
+        usernamePasswordFile: /f
+    s3:
+      enabled: false
+      accounts:
+      - name: my-s3-account
+        apiEndpoint: api
+        apiRegion: region
+        region: region
+        awsAccessKeyId: id
+        awsSecretAccessKey: key
+    maven:
+      enabled: false
+      accounts:
+      - name: my-maven-account
+        repositoryUrl: url
+    templates:
+    - name: my-template
+      templatePath: path
