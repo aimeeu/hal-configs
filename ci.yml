@@ -1,0 +1,66 @@
+ci:
+    jenkins:
+      enabled: false
+      masters:
+      - name: ci-jenkins
+        permissions:
+          READ:
+          - bubba
+          WRITE:
+          - bubba
+          - betty
+        address: ip
+        username: u
+        password: p
+        csrf: true
+    travis:
+      enabled: false
+      masters:
+      - name: ci-travis
+        permissions:
+          READ:
+          - stanley
+          WRITE:
+          - kubrick
+        address: ip
+        baseUrl: url
+        githubToken: t
+        numberOfRepositories: 200
+    wercker:
+      enabled: false
+      masters:
+      - name: ci-werker
+        permissions:
+          READ:
+          - jane
+          - andy
+          WRITE:
+          - spinnaker
+          - jenkins
+          - travis
+        address: a
+        user: u
+        token: t
+    concourse:
+      enabled: false
+      masters:
+      - name: ci-concourse
+        permissions:
+          READ:
+          - bubba
+          WRITE:
+          - bubba
+        url: url
+        username: userId
+        password: p
+    gcb:
+      enabled: false
+      accounts:
+      - name: ci-gcb
+        permissions: {}
+        project: p
+        subscriptionName: name
+        jsonKey: key
+    codebuild:
+      enabled: false
+      accounts: []
