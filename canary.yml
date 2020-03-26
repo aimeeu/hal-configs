@@ -1,0 +1,80 @@
+canary:
+    enabled: false
+    serviceIntegrations:
+    - name: google
+      enabled: false
+      accounts:
+      - name: google-canary
+        project: p
+        jsonPath: /p
+        bucket: b
+        bucketLocation: bl
+        rootFolder: rf
+        supportedTypes: []
+      gcsEnabled: false
+      stackdriverEnabled: false
+    - name: prometheus
+      enabled: false
+      accounts:
+      - name: my-account
+        endpoint:
+          baseUrl: url
+        username: u
+        password: password
+        usernamePasswordFile: /p
+        supportedTypes:
+        - METRICS_STORE
+    - name: datadog
+      enabled: false
+      accounts:
+      - name: datadog-canary
+        endpoint:
+          baseUrl: url
+        apiKey: key
+        applicationKey: key
+        supportedTypes:
+        - METRICS_STORE
+    - name: signalfx
+      enabled: false
+      accounts:
+      - name: signalfx-canary
+        accessToken: t
+        endpoint:
+          baseUrl: url
+        defaultScopeKey: key
+        defaultLocationKey: key
+        supportedTypes:
+        - METRICS_STORE
+    - name: aws
+      enabled: false
+      accounts:
+      - name: aws-canary
+        bucket: bucket
+        region: r
+        rootFolder: rf
+        profileName: p
+        endpoint: e
+        accessKeyId: id
+        secretAccessKey: secret
+        supportedTypes: []
+      s3Enabled: false
+    - name: newrelic
+      enabled: false
+      accounts:
+      - name: newrelic-canary
+        endpoint:
+          baseUrl: url
+        apiKey: key
+        applicationKey: key
+        supportedTypes:
+        - METRICS_STORE
+    reduxLoggerEnabled: true
+    defaultMetricsAccount: dma
+    defaultJudge: df
+    defaultMetricsStore: d
+    stagesEnabled: true
+    atlasWebComponentsUrl: url
+    templatesEnabled: true
+    showAllConfigsEnabled: true
+
+
